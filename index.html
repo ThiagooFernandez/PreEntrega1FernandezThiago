@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="end">
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+        <title>COTIZADOR DE SEGUROS</title>
+        <link rel="stylesheet" href="estilos.css">
+       
+</head>
+<body onload="">
+    <div class="container">
+        <header>
+            <h1>COTIZADOR DE SEGUROS PA</h1>
+        </header>
+        <div class="formulario">
+            <form>
+                <div id="msj-error"></div>
+                <div class="campo">
+                    <label>Marca</label>
+                    <select name="marca" id="marc">
+                        <option value="">----Seleccione una opcion---</option>
+                        <option value="">Audi</option>
+                        <option value="">BMW</option>
+                        <option value="">FIAT</option>
+                        <option value="">Chevrolet</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label >Año</label>
+                    <select name="year" id="anio">
+                        <option value="">----Seleccione un Año----</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label >Plan</label>
+                    <input type="radio" name="plan" value="basico" class="radio" id="basico">BASICO
+                    
+                    <input type="radio" name="plan" value="basico" class="radio" id="completo">COMPLETO
+                </div>
+                <input type="button" onclick="cotizarSeguro()" class="button-primary u-full-width" value="Cotizar">
+            </form>
+            <div class="mensaje" id="msj">Elige Marca,año y tipo de seguro</div>
+            <div id="resumen" style="display: none"></div>
+            <div class="" id="resultado" style="display: none"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+    <script src="appCotizador.js"></script>
+    
+</body>
