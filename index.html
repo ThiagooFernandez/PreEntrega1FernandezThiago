@@ -14,42 +14,44 @@
 <body onload="">
     <div class="container">
         <header>
-            <h1>COTIZADOR DE SEGUROS PA</h1>
+            <h1>COTIZADOR DE SEGUROS S.A</h1>
         </header>
         <div class="formulario">
             <form>
                 <div id="msj-error"></div>
                 <div class="campo">
                     <label>Marca</label>
-                    <select name="marca" id="marc">
+                    <select name="marca" id="marca">
                         <option value="">----Seleccione una opcion---</option>
-                        <option value="">Audi</option>
-                        <option value="">BMW</option>
-                        <option value="">FIAT</option>
-                        <option value="">Chevrolet</option>
+                        <option value="500">Audi</option>
+                        <option value="1000">BMW</option>
+                        <option value="1500">FIAT</option>
+                        <option value="2000">Chevrolet</option>
                     </select>
                 </div>
                 <div class="campo">
                     <label >Año</label>
-                    <select name="year" id="anio">
-                        <option value="">----Seleccione un Año----</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
+                    <select name="year" id="year">
+                        <option selected="selected">----Seleccione un Año----</option>
+                        <option value="500">2022</option>
+                        <option value="400">2021</option>
+                        <option value="300">2020</option>
+                        <option value="200">2019</option>
+                        <option value="100">2018</option>
+                        <option value="10">2017</option>
                     </select>
                 </div>
                 <div class="campo">
-                    <label >Plan</label>
-                    <input type="radio" name="plan" value="basico" class="radio" id="basico">BASICO
-                    
-                    <input type="radio" name="plan" value="basico" class="radio" id="completo">COMPLETO
+                    <label >Año</label>
+                    <select name="year" id="plan">
+                        <option value="">----Seleccione un plan----</option>
+                        <option value="10000">BASICO</option>
+                        <option value="100">COMPLETO</option>
+                    </select>
                 </div>
                 <input type="button" onclick="cotizarSeguro()" class="button-primary u-full-width" value="Cotizar">
             </form>
-            <div class="mensaje" id="msj">Elige Marca,año y tipo de seguro</div>
+            <div class="mensaje" id="mensaje"></div>
             <div id="resumen" style="display: none"></div>
             <div class="" id="resultado" style="display: none"></div>
         </div>
